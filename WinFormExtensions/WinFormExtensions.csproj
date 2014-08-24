@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A985735-15E1-4B33-BC46-403487623C29}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinFormExtensions</RootNamespace>
+    <AssemblyName>WinFormExtensions</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\WinFormExtensions.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckListForm.designer.cs">
+      <DependentUpon>CheckListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetExtension.cs" />
+    <Compile Include="DbDataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DbListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DbTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DirectoryPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DirectoryPicker.designer.cs">
+      <DependentUpon>DirectoryPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectoryPickerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectoryPickerForm.Designer.cs">
+      <DependentUpon>DirectoryPickerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectoryToDirectory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DirectoryToDirectory.designer.cs">
+      <DependentUpon>DirectoryToDirectory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListBoxForm.Designer.cs">
+      <DependentUpon>ListBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MutiTextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MutiTextForm.designer.cs">
+      <DependentUpon>MutiTextForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NativeInterop.cs" />
+    <Compile Include="ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StringCollectionExtension.cs" />
+    <Compile Include="TextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextForm.designer.cs">
+      <DependentUpon>TextForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormExtension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CheckListForm.resx">
+      <DependentUpon>CheckListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectoryPicker.resx">
+      <DependentUpon>DirectoryPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectoryPickerForm.resx">
+      <DependentUpon>DirectoryPickerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectoryToDirectory.resx">
+      <DependentUpon>DirectoryToDirectory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListBoxForm.resx">
+      <DependentUpon>ListBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MutiTextForm.resx">
+      <DependentUpon>MutiTextForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressForm.resx">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextForm.resx">
+      <DependentUpon>TextForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
