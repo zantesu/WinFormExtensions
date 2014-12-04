@@ -84,6 +84,12 @@
     <Compile Include="ListBoxForm.Designer.cs">
       <DependentUpon>ListBoxForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoadingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoadingControl.Designer.cs">
+      <DependentUpon>LoadingControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="MutiTextForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,12 +97,6 @@
       <DependentUpon>MutiTextForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NativeInterop.cs" />
-    <Compile Include="ProgressForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProgressForm.Designer.cs">
-      <DependentUpon>ProgressForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="StringCollectionExtension.cs" />
     <Compile Include="TextForm.cs">
       <SubType>Form</SubType>
@@ -123,11 +123,11 @@
     <EmbeddedResource Include="ListBoxForm.resx">
       <DependentUpon>ListBoxForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoadingControl.resx">
+      <DependentUpon>LoadingControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MutiTextForm.resx">
       <DependentUpon>MutiTextForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProgressForm.resx">
-      <DependentUpon>ProgressForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TextForm.resx">
       <DependentUpon>TextForm.cs</DependentUpon>

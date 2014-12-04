@@ -160,5 +160,56 @@ namespace WinFormExtensions {
                 .Where(r => r != null)
                 .Select(r => r.Row);
         }
+
+        /// <summary>
+        /// 获得ListView所选中的第一个Item
+        /// </summary>
+        /// <param name="listView"></param>
+        /// <returns></returns>
+        public static ListViewItem SelectedSingleItem(this ListView listView) {
+            return listView.SelectedItems.OfType<ListViewItem>().FirstOrDefault();
+        }
+
+        /// <summary>
+        /// 除了给定的按钮,工具栏上任何开启CheckOnClick的按钮的Check状态都置为false
+        /// 给定的按钮置为true,从而模拟单选按钮组的效果
+        /// </summary>
+        /// <param name="toolStrip"></param>
+        /// <param name="checkedButton"></param>
+        public static void SetCheckAsRadioButtonGroup(this ToolStrip toolStrip, ToolStripButton checkedButton) {
+            foreach (var button in toolStrip.Items.OfType<ToolStripButton>().Where(b => b.CheckOnClick)) {
+                button.Checked = false;
+            }
+
+            if (checkedButton != null) {
+                checkedButton.Checked = true;
+            }
+        }
+
+        /// <summary>
+        /// 如果窗体不为null也没有dispose则关闭之
+        /// </summary>
+        /// <param name="form"></param>
+        public static void SafeClose(this Form form) {
+            if (form != null && !form.IsDisposed) {
+                form.Close();
+            }
+        }
+
+        /// <summary>
+        /// 如果窗体存在没有销毁则激活, 如果窗体最小化则还原
+        /// </summary>
+        /// <param name="form"></param>
+        public static bool SafeActive(this Form form) {
+            if (form!=null && !form.IsDisposed) {
+                if (form.WindowState == FormWindowState.Minimized) {
+                    form.WindowState = FormWindowState.Normal;
+                }
+                form.Activate();
+                return true;
+            }
+
+            return false;
+        }
     }
 }
